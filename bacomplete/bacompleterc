@@ -1,0 +1,5 @@
+set editing-mode emacs
+"\C-x\C-x1":insert-completions
+"\C-x\C-x2":set-mark
+"\C-x\C-x3":kill-region
+"\t": "\C-x\C-x2\C-x\C-x1\C-a\C-x\C-x3~/workspace/bacomplete/chooser.sh \042\C-e\042 \042\C-y\042"

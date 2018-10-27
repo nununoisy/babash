@@ -1,8 +1,13 @@
 #!/bin/bash
 
-# simple hook for `complete`
+# create readline binds here
 
-complete() {
-    echo "babash debug - complete ${@}"
-    eval "$(~/babash/chooser.sh hook $@)"
-}
+# load cfg file
+if [[ -z ~/.config/babash.cfg ]]; then
+    echo "Config file does not exist or error reading."
+    exit 1
+fi
+
+. ~/.config/babash.cfg
+
+bind -f ./bacompleterc
